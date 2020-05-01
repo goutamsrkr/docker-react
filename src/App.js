@@ -12,6 +12,7 @@ class App extends Component {
         </header>
         <p className="App-intro">
           Hello Elastic Beanstalk!!!
+          Updated in feature branch ==>>>>>
         </p>
       </div>
     );
