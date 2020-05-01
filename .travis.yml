@@ -3,18 +3,18 @@ services:
   - docker
 
 before_install:
-  - docker build -t stephengrider/docker-react -f Dockerfile.dev .
+  - docker build -t goutam/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run stephengrider/docker-react npm run test -- --coverage
+  - docker run goutam/docker-react npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
   region: "ap-south-1"
-  app: "react_app"
-  env: "ReactApp-env"
+  app: "react"
+  env: "React-env"
   bucket_name: "elasticbeanstalk-ap-south-1-538634141848"
-  bucket_path: "react_app"
+  bucket_path: "react"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
